@@ -10,8 +10,7 @@ export function createElement(element, parent = undefined, cls = undefined, txt 
             ret.classList.add(element);
         });
     }
-    if (typeof(txt) == "string" && txt != "")
-        ret.textContent = txt;
+    ret.textContent = txt;
     if (typeof(parent) == "object" && parent != undefined)
         parent.appendChild(ret);
     return ret;

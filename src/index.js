@@ -1,8 +1,10 @@
 import "./style.css";
 import displayHome from "./home.js";
+import displayMenu from "./menu.js";
 
 function main() {
-    displayHome();
+    // displayHome();
+    displayMenu();
 }
 
 main();
