@@ -15,3 +15,7 @@ export function createElement(element, parent = undefined, cls = undefined, txt 
         parent.appendChild(ret);
     return ret;
 };
+
+export function writeHeader(parent, content) {
+    createElement("div", parent, ["content-header"], content);
+}

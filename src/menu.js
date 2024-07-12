@@ -1,9 +1,6 @@
 import {createElement} from "./domHelper.js";
+import { writeHeader } from "./domHelper.js";
 
-function writeHeader(parent) {
-    const content = "Menu";
-    createElement("div", parent, ["content-header"], content);
-}
 
 function writeSubTitle(parent, content) {
     const container = createElement("div", parent, ["content-item", "dishes-title"], "");
@@ -22,10 +19,9 @@ function writeDish(parent, content, title, price) {
 }
 
 
-export default function() {
-    const container = document.getElementById("content");
+export default function(container) {
 
-    writeHeader(container);
+    writeHeader(container, "Menu");
 
     // writing beverages
     writeSubTitle(container, "Beverages");

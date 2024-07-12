@@ -1,20 +1,7 @@
 
 import {createElement} from "./domHelper.js";
+import { writeHeader } from "./domHelper.js";
 
-function display() {
-    // the container we will be writing on
-    const content = document.getElementById("content");
-    writeContentHeader(content);
-    writeDescription(content);
-    writeSchedule(content);
-    writeLocation(content);
-}
-
-function writeContentHeader(parent) {
-    // content of the element
-    const content = "Ginger and union cusine"
-    createElement("div", parent, ["content-header"], content);
-}
 
 function writeDescription(parent) {
     const description = `
@@ -61,4 +48,9 @@ function writeLocation(parent) {
     createElement("div", container, undefined, "Stony Brook, NY 11794-1901");
 }
 
-export default display;
+export default function(container) {
+    writeHeader(container, "Ginger and union cusine");
+    writeDescription(container);
+    writeSchedule(container);
+    writeLocation(container);
+}
