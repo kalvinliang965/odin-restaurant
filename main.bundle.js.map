@@ -1,0 +1,1 @@
+{"version":3,"file":"main.bundle.js","mappings":"6FAAAA,QAAQC,IAAI,gB","sources":["webpack://odin-restaurant/./src/index.js"],"sourcesContent":["console.log(\"Hello, world!\");"],"names":["console","log"],"sourceRoot":""}
